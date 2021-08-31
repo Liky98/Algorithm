@@ -44,10 +44,10 @@ def search() :
             #현재 거래량
             curVolume = int(df.iloc[-1]['volume'])
             Price = pyupbit.get_current_price(i)
-            #print()
-            #print("***  "+ i + "   ***")
-            #print('처음 종가/거래량' + str(firstClose) + '/' + str(firstVolume))
-            #print('현재 종가/거래량' + str(curClose) + '/' + str(curVolume))
+            print()
+            print("***  "+ i + "   ***")
+            print('처음 종가/거래량' + str(firstClose) + '/' + str(firstVolume))
+            print('현재 종가/거래량' + str(curClose) + '/' + str(curVolume))
 
             if (firstClose < int(Price) and sClose < int(Price) and ssClose*1.01 < int(Price) and firstVolume * 1.5 < curVolume and sVolume *2 < curVolume) :
                 print("!!!!!!!급등코인!!!!!!!!")
